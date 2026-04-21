@@ -1,432 +1,217 @@
 export default function Home() {
   return (
-    <>
-      <style>{`
-        * {
-          box-sizing: border-box;
-        }
+    <main className="page">
+      {/* FLOATING RACCOONS */}
+      <img className="raccoon left" src="https://images.unsplash.com/photo-1601758173927-196cc8a9b1e5?q=80&w=800" />
+      <img className="raccoon right" src="https://images.unsplash.com/photo-1595433562696-8c69b6e3c1a2?q=80&w=800" />
+      <img className="raccoon peek" src="https://images.unsplash.com/photo-1601758064229-55e7d1d5c0b2?q=80&w=800" />
 
-        html {
-          scroll-behavior: smooth;
-        }
+      <section className="hero">
+        <div className="left">
+          <div className="logo">
+            <span className="green">TRAP</span>
+            <span className="white">PRO</span>
+          </div>
 
-        body {
-          margin: 0;
-          background:
-            radial-gradient(circle at 20% 20%, rgba(0,255,120,0.14), transparent 35%),
-            radial-gradient(circle at 80% 10%, rgba(0,255,80,0.10), transparent 30%),
-            radial-gradient(circle at 50% 80%, rgba(0,180,60,0.10), transparent 35%),
-            linear-gradient(180deg, #031108 0%, #05170a 45%, #021006 100%);
-          color: #ecfff1;
-          font-family: Arial, Helvetica, sans-serif;
+          <div className="sub">WILDLIFE & PEST CONTROL</div>
+
+          <h1>
+            WILDLIFE PROBLEMS?
+            <br />
+            <span>WE SOLVE THEM.</span>
+          </h1>
+
+          <div className="tag">FAST. HUMANE. EFFECTIVE.</div>
+        </div>
+
+        <div className="right">
+          <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&w=1200" />
+        </div>
+      </section>
+
+      {/* COMING SOON BAR */}
+      <section className="callbar">
+        <div className="icon">📞</div>
+        <div>
+          <div className="big">COMING SOON</div>
+          <div className="small">CALL OR TEXT – SAME DAY SERVICE</div>
+        </div>
+      </section>
+
+      {/* CONTENT */}
+      <section className="content">
+        <div className="card">
+          <h3>WE HANDLE</h3>
+          <ul>
+            <li>Raccoons</li>
+            <li>Squirrels</li>
+            <li>Rats & Mice</li>
+            <li>Skunks</li>
+            <li>Birds</li>
+            <li>Exclusion & Prevention</li>
+          </ul>
+        </div>
+
+        <div className="card">
+          <h3>OUR PROMISE</h3>
+          <ul>
+            <li>Humane Removal</li>
+            <li>Thorough Inspection</li>
+            <li>Exclusion & Repair</li>
+            <li>Honest & Reliable</li>
+          </ul>
+        </div>
+
+        <div className="gallery">
+          <img src="https://images.unsplash.com/photo-1601758173927-196cc8a9b1e5?q=80&w=800" />
+          <img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?q=80&w=800" />
+          <img src="https://images.unsplash.com/photo-1595433562696-8c69b6e3c1a2?q=80&w=800" />
+        </div>
+      </section>
+
+      {/* FOOTER BADGES */}
+      <section className="badges">
+        <div>🕒 SAME DAY SERVICE</div>
+        <div>🛡️ FULLY INSURED</div>
+        <div>📍 SERVING 530 AREA</div>
+        <div>👍 TRUSTED SERVICE</div>
+      </section>
+
+      <style jsx>{`
+        .page {
+          background: #050505;
+          color: white;
+          min-height: 100vh;
+          font-family: Arial, sans-serif;
           overflow-x: hidden;
         }
 
-        a {
-          color: inherit;
-        }
-
-        .page {
-          position: relative;
-          min-height: 100vh;
-          overflow: hidden;
-          padding: 32px 20px 80px;
-        }
-
-        .gridGlow {
-          position: absolute;
-          inset: 0;
-          background-image:
-            linear-gradient(rgba(0,255,100,0.06) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0,255,100,0.06) 1px, transparent 1px);
-          background-size: 38px 38px;
-          mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.2));
-          pointer-events: none;
-        }
-
-        .orb {
-          position: absolute;
-          border-radius: 999px;
-          filter: blur(70px);
-          opacity: 0.28;
-          pointer-events: none;
-        }
-
-        .orb1 {
-          width: 300px;
-          height: 300px;
-          background: #00ff73;
-          top: -80px;
-          left: -60px;
-          animation: floatOrb 7s ease-in-out infinite;
-        }
-
-        .orb2 {
-          width: 320px;
-          height: 320px;
-          background: #00ff99;
-          right: -80px;
-          top: 180px;
-          animation: floatOrb 9s ease-in-out infinite reverse;
-        }
-
-        .orb3 {
-          width: 260px;
-          height: 260px;
-          background: #00cc55;
-          bottom: -90px;
-          left: 35%;
-          animation: floatOrb 10s ease-in-out infinite;
-        }
-
-        @keyframes floatOrb {
-          0%, 100% { transform: translateY(0px) translateX(0px); }
-          50% { transform: translateY(25px) translateX(10px); }
-        }
-
-        .container {
-          position: relative;
-          z-index: 2;
-          max-width: 1180px;
-          margin: 0 auto;
-        }
-
         .hero {
-          min-height: 100vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
         }
 
-        .heroCard {
-          width: 100%;
-          position: relative;
-          padding: 42px 28px;
-          border: 1px solid rgba(90,255,140,0.28);
-          background: rgba(3, 20, 8, 0.72);
-          backdrop-filter: blur(10px);
-          border-radius: 28px;
-          box-shadow:
-            0 0 0 1px rgba(0,255,120,0.08) inset,
-            0 0 30px rgba(0,255,90,0.16),
-            0 0 90px rgba(0,255,90,0.09);
-          overflow: hidden;
+        .left {
+          padding: 40px;
         }
 
-        .heroCard::before {
-          content: "";
-          position: absolute;
-          inset: -1px;
-          border-radius: 28px;
-          padding: 1px;
-          background: linear-gradient(135deg, rgba(120,255,170,0.65), rgba(0,255,85,0.08), rgba(120,255,170,0.5));
-          -webkit-mask:
-            linear-gradient(#000 0 0) content-box,
-            linear-gradient(#000 0 0);
-          -webkit-mask-composite: xor;
-                  mask-composite: exclude;
-          pointer-events: none;
-        }
-
-        .eyebrow {
-          display: inline-block;
-          margin-bottom: 14px;
-          padding: 8px 14px;
-          border-radius: 999px;
-          background: rgba(0,255,115,0.12);
-          border: 1px solid rgba(106,255,156,0.24);
-          color: #9effbf;
-          font-size: 13px;
-          font-weight: 700;
-          letter-spacing: 1.5px;
-          text-transform: uppercase;
-          box-shadow: 0 0 18px rgba(0,255,90,0.15);
-        }
-
-        .title {
-          font-size: clamp(48px, 9vw, 110px);
-          line-height: 0.94;
-          margin: 0;
+        .logo {
+          font-size: 80px;
           font-weight: 900;
-          letter-spacing: -2px;
-          text-transform: uppercase;
-          text-shadow:
-            0 0 8px rgba(150,255,190,0.35),
-            0 0 25px rgba(0,255,110,0.28),
-            0 0 50px rgba(0,255,110,0.18);
         }
 
-        .titleAccent {
-          color: #8effaf;
+        .green {
+          color: #b8d92b;
+        }
+
+        .white {
+          color: white;
         }
 
         .sub {
-          max-width: 760px;
-          margin: 18px auto 0;
-          font-size: clamp(18px, 2.5vw, 24px);
-          line-height: 1.5;
-          color: #d7ffe3;
-          text-shadow: 0 0 18px rgba(0,255,100,0.12);
+          font-size: 20px;
+          margin-bottom: 20px;
         }
 
-        .ctaRow {
-          margin-top: 34px;
-          display: flex;
-          flex-wrap: wrap;
-          gap: 14px;
-          justify-content: center;
+        h1 {
+          font-size: 60px;
+          line-height: 1;
         }
 
-        .btnPrimary,
-        .btnSecondary {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          min-width: 220px;
-          padding: 18px 28px;
-          border-radius: 14px;
-          text-decoration: none;
-          font-weight: 800;
-          font-size: 17px;
-          transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        h1 span {
+          color: #b8d92b;
         }
 
-        .btnPrimary {
-          background: linear-gradient(135deg, #00ff66, #00c94f);
-          color: #021107;
-          box-shadow:
-            0 0 16px rgba(0,255,85,0.35),
-            0 0 36px rgba(0,255,85,0.18);
-        }
-
-        .btnPrimary:hover {
-          transform: translateY(-2px);
-          box-shadow:
-            0 0 20px rgba(0,255,85,0.45),
-            0 0 50px rgba(0,255,85,0.24);
-        }
-
-        .btnSecondary {
-          background: rgba(255,255,255,0.04);
-          color: #dffff0;
-          border: 1px solid rgba(130,255,170,0.24);
-        }
-
-        .btnSecondary:hover {
-          transform: translateY(-2px);
-          background: rgba(255,255,255,0.07);
-        }
-
-        .services {
-          margin-top: 34px;
-          display: grid;
-          grid-template-columns: repeat(4, minmax(0, 1fr));
-          gap: 14px;
-        }
-
-        .service {
-          padding: 16px 14px;
-          border-radius: 18px;
-          background: rgba(255,255,255,0.035);
-          border: 1px solid rgba(120,255,170,0.14);
-          color: #e6ffee;
-          font-weight: 700;
-          box-shadow: 0 0 12px rgba(0,255,80,0.08);
-        }
-
-        .animalsWrap {
-          position: relative;
-          height: 210px;
-          margin-top: 28px;
-          overflow: hidden;
-          border-radius: 22px;
-          border: 1px solid rgba(120,255,170,0.14);
-          background:
-            linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)),
-            rgba(0,0,0,0.16);
-        }
-
-        .animalTrack {
-          position: absolute;
-          inset: 0;
-        }
-
-        .animal {
-          position: absolute;
-          font-size: 54px;
-          filter: drop-shadow(0 0 10px rgba(0,255,90,0.45));
-          user-select: none;
-          opacity: 0.95;
-        }
-
-        .raccoon {
-          top: 24px;
-          left: -80px;
-          animation: moveRight 14s linear infinite;
-        }
-
-        .skunk {
-          top: 92px;
-          left: -100px;
-          animation: moveRight 18s linear infinite;
-          animation-delay: -6s;
-        }
-
-        .rat {
-          bottom: 20px;
-          left: -70px;
-          animation: moveRight 11s linear infinite;
-          animation-delay: -3s;
-        }
-
-        .bat {
-          top: 10px;
-          right: -80px;
-          animation: moveLeft 13s linear infinite;
-        }
-
-        @keyframes moveRight {
-          0% { transform: translateX(0) rotate(0deg); opacity: 0; }
-          8% { opacity: 1; }
-          92% { opacity: 1; }
-          100% { transform: translateX(calc(100vw + 220px)) rotate(0deg); opacity: 0; }
-        }
-
-        @keyframes moveLeft {
-          0% { transform: translateX(0) scaleX(-1); opacity: 0; }
-          8% { opacity: 1; }
-          92% { opacity: 1; }
-          100% { transform: translateX(calc(-100vw - 220px)) scaleX(-1); opacity: 0; }
-        }
-
-        .pulseBar {
+        .tag {
           margin-top: 20px;
-          height: 10px;
+          font-weight: bold;
+        }
+
+        .right img {
           width: 100%;
-          border-radius: 999px;
-          background: rgba(255,255,255,0.06);
-          overflow: hidden;
-          border: 1px solid rgba(130,255,170,0.12);
-        }
-
-        .pulseFill {
           height: 100%;
-          width: 34%;
-          background: linear-gradient(90deg, #00b347, #00ff66, #aaffc5);
-          box-shadow: 0 0 20px rgba(0,255,80,0.4);
-          animation: sweep 2.4s ease-in-out infinite;
+          object-fit: cover;
         }
 
-        @keyframes sweep {
-          0% { transform: translateX(-100%); }
-          50% { transform: translateX(170%); }
-          100% { transform: translateX(320%); }
+        .callbar {
+          background: #b8d92b;
+          color: black;
+          display: flex;
+          gap: 20px;
+          padding: 20px;
+          align-items: center;
         }
 
-        .bottomNote {
-          margin-top: 18px;
-          color: #9fdcaf;
-          font-size: 14px;
-          opacity: 0.9;
+        .big {
+          font-size: 60px;
+          font-weight: 900;
         }
 
-        @media (max-width: 900px) {
-          .services {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-          }
-
-          .heroCard {
-            padding: 28px 18px;
-          }
-
-          .animalsWrap {
-            height: 180px;
-          }
+        .content {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+          padding: 20px;
         }
 
-        @media (max-width: 560px) {
-          .page {
-            padding: 18px 12px 48px;
-          }
+        .card {
+          border: 1px solid #b8d92b;
+          padding: 20px;
+        }
 
-          .services {
-            grid-template-columns: 1fr;
-          }
+        .card h3 {
+          color: #b8d92b;
+        }
 
-          .btnPrimary,
-          .btnSecondary {
-            width: 100%;
-            min-width: 0;
-          }
+        .gallery img {
+          width: 100%;
+          margin-bottom: 10px;
+        }
 
-          .animal {
-            font-size: 42px;
-          }
+        .badges {
+          display: flex;
+          justify-content: space-around;
+          padding: 20px;
+          border-top: 1px solid #b8d92b;
+        }
 
-          .animalsWrap {
-            height: 160px;
-          }
+        /* 🔥 RACCOON ANIMATIONS */
+        .raccoon {
+          position: fixed;
+          width: 140px;
+          z-index: 10;
+          pointer-events: none;
+        }
+
+        .left {
+          animation: crawlLeft 18s linear infinite;
+        }
+
+        .right {
+          animation: crawlRight 20s linear infinite;
+        }
+
+        .peek {
+          bottom: -40px;
+          left: 40%;
+          animation: peek 6s ease-in-out infinite;
+        }
+
+        @keyframes crawlLeft {
+          0% { left: -150px; top: 40%; }
+          100% { left: 110%; top: 45%; }
+        }
+
+        @keyframes crawlRight {
+          0% { right: -150px; top: 60%; }
+          100% { right: 110%; top: 55%; }
+        }
+
+        @keyframes peek {
+          0%,100% { transform: translateY(100px); }
+          50% { transform: translateY(0); }
         }
       `}</style>
-
-      <main className="page">
-        <div className="gridGlow" />
-        <div className="orb orb1" />
-        <div className="orb orb2" />
-        <div className="orb orb3" />
-
-        <div className="container hero">
-          <section className="heroCard">
-            <div style={{ textAlign: "center" }}>
-              <div className="eyebrow">Wildlife Control</div>
-
-              <h1 className="title">
-                <span className="titleAccent">Trap</span>Pro
-              </h1>
-
-              <p className="sub">
-                Flashy, fast, sharp, and built to hit hard. Wildlife and pest
-                control with a cleaner look, stronger presence, and a site that
-                actually feels alive.
-              </p>
-
-              <div className="ctaRow">
-                <a href="#" className="btnPrimary">
-                  Number Coming Soon
-                </a>
-                <a href="#services" className="btnSecondary">
-                  View Services
-                </a>
-              </div>
-
-              <div id="services" className="services">
-                <div className="service">Raccoons</div>
-                <div className="service">Skunks</div>
-                <div className="service">Rats & Rodents</div>
-                <div className="service">Attic Cleanouts</div>
-              </div>
-
-              <div className="animalsWrap">
-                <div className="animalTrack">
-                  <div className="animal raccoon">🦝</div>
-                  <div className="animal skunk">🦨</div>
-                  <div className="animal rat">🐀</div>
-                  <div className="animal bat">🦇</div>
-                </div>
-              </div>
-
-              <div className="pulseBar">
-                <div className="pulseFill" />
-              </div>
-
-              <p className="bottomNote">
-                TrapPro website in progress. Contact details and full service
-                rollout coming soon.
-              </p>
-            </div>
-          </section>
-        </div>
-      </main>
-    </>
+    </main>
   );
 }
