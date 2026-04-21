@@ -54,7 +54,7 @@ export default function Page() {
               </p>
 
               <div className="inline-block rounded-2xl border-4 border-[#b7d61a] bg-[#b7d61a] px-5 py-4 text-center text-black shadow-[0_0_40px_rgba(181,214,35,0.2)]">
-                <div className="text-3xl font-black sm:text-5xl">530-372-TRAP</div>
+                <div className="text-3xl font-black sm:text-5xl">530-500-TRAP</div>
                 <div className="mt-1 text-sm font-extrabold uppercase sm:text-base">
                   Call or Text • Same Day Service
                 </div>
@@ -235,7 +235,7 @@ export default function Page() {
               Need help now?
             </p>
             <h2 className="mt-1 text-3xl font-black uppercase sm:text-4xl">
-              530-372-TRAP
+              530-500-TRAP
             </h2>
             <p className="mt-2 text-sm font-bold uppercase">
               Call or text for same day service
@@ -264,10 +264,11 @@ export default function Page() {
         <div className="grid gap-6 rounded-3xl border border-white/10 bg-neutral-950 p-6 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
           <div>
             <p className="text-xs font-black uppercase tracking-[0.2em] text-white/50">
-              Visit Us Online
+              CALL US NOW
             </p>
             <a
-              href="https://trappro530.com"
+              href="530-500-TRAP(8727)"
+          
               className="mt-2 block text-3xl font-black uppercase text-[#b7d61a] hover:text-white"
             >
               trappro530.com
