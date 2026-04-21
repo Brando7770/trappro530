@@ -5,7 +5,6 @@ const services = [
   "Squirrels",
   "Rats & Mice",
   "Skunks",
-  "Birds",
   "Exclusion & Prevention",
 ];
 
@@ -62,13 +61,13 @@ export default function Page() {
 
               <div className="flex flex-wrap gap-3 pt-2">
                 <a
-                  href="tel:5303728727"
+                  href="tel:5305008727"
                   className="rounded-xl bg-[#b7d61a] px-6 py-3 text-sm font-black uppercase tracking-wide text-black transition hover:scale-[1.02]"
                 >
                   Call Now
                 </a>
                 <a
-                  href="sms:5303728727"
+                  href="sms:5305008727"
                   className="rounded-xl border border-[#b7d61a] px-6 py-3 text-sm font-black uppercase tracking-wide text-[#b7d61a] transition hover:bg-[#b7d61a] hover:text-black"
                 >
                   Text Us
@@ -244,13 +243,13 @@ export default function Page() {
 
           <div className="flex flex-wrap justify-center gap-3 md:justify-end">
             <a
-              href="tel:5303728727"
+              href="tel:5305008727"
               className="rounded-xl bg-black px-6 py-3 text-sm font-black uppercase tracking-wide text-white transition hover:scale-[1.02]"
             >
               Call Now
             </a>
             <a
-              href="sms:5303728727"
+              href="sms:5305008727"
               className="rounded-xl border-2 border-black px-6 py-3 text-sm font-black uppercase tracking-wide text-black transition hover:bg-black hover:text-white"
             >
               Text Us
@@ -271,7 +270,7 @@ export default function Page() {
           
               className="mt-2 block text-3xl font-black uppercase text-[#b7d61a] hover:text-white"
             >
-              trappro530.com
+              "530-500-TRAP (8727)"
             </a>
           </div>
 
