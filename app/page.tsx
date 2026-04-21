@@ -8,14 +8,14 @@ export default function Home() {
     "Exclusion & Prevention",
   ];
 
-  const promises = [
+  const promise = [
     "Humane Removal",
     "Thorough Inspection",
     "Exclusion & Repair",
     "Honest & Reliable",
   ];
 
-  const badges = [
+  const bottomBadges = [
     "Same Day Service",
     "Fully Insured & Licensed",
     "Proudly Serving The 530 Area",
@@ -25,31 +25,11 @@ export default function Home() {
   return (
     <>
       <main className="page">
-        <div className="glow glow1" />
-        <div className="glow glow2" />
-
-        {/* animated raccoons only */}
-        <img
-          className="peek peekTop"
-          src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=900&q=80"
-          alt="Raccoon peeking from top"
-        />
-        <img
-          className="peek peekLeft"
-          src="https://images.unsplash.com/photo-1601758173927-196cc8a9b1e5?auto=format&fit=crop&w=900&q=80"
-          alt="Raccoon peeking from left"
-        />
-        <img
-          className="peek peekRight"
-          src="https://images.unsplash.com/photo-1595433562696-8c69b6e3c1a2?auto=format&fit=crop&w=900&q=80"
-          alt="Raccoon peeking from right"
-        />
-
-        <section className="shell hero">
+        <section className="hero">
           <div className="heroLeft">
             <div className="roofWrap">
-              <div className="roofL" />
-              <div className="roofR" />
+              <div className="roofLeft" />
+              <div className="roofRight" />
               <div className="windowGrid">
                 <span />
                 <span />
@@ -74,54 +54,73 @@ export default function Home() {
             <h2 className="headlineTop">WILDLIFE PROBLEMS?</h2>
             <h2 className="headlineBottom">WE SOLVE THEM.</h2>
 
-            <div className="tagline">FAST. HUMANE. EFFECTIVE.</div>
+            <div className="tagline">
+              <span className="line" />
+              <span>FAST. HUMANE. EFFECTIVE.</span>
+              <span className="line" />
+            </div>
           </div>
 
           <div className="heroRight">
-            <div className="slash" />
-            <img
-              className="heroImg"
-              src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=1400&q=80"
-              alt="Raccoon"
-            />
-            <div className="trusted">
-              LOCAL &amp; TRUSTED
+            <div className="heroImageWrap">
+              <img
+                src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=1400&q=80"
+                alt="Raccoon"
+                className="heroImage"
+              />
+            </div>
+
+            <div className="trustTag">
+              LOCAL
+              <br />
+              &amp; TRUSTED
               <br />
               IN THE 530 AREA!
             </div>
           </div>
         </section>
 
-        <section className="shell comingBar">
-          <div className="phoneCircle">☎</div>
-          <div className="comingText">
-            <div className="comingBig">COMING SOON</div>
-            <div className="comingSmall">CALL OR TEXT • SAME DAY SERVICE</div>
+        <section className="phoneBand">
+          <div className="phoneIcon">☎</div>
+
+          <div className="phoneText">
+            <div className="phoneBig">NUMBER COMING SOON</div>
+            <div className="phoneSmall">
+              <span className="smallLine" />
+              <span>CALL OR TEXT – SAME DAY SERVICE!</span>
+              <span className="smallLine" />
+            </div>
           </div>
         </section>
 
-        <section className="shell content">
-          <div className="panel">
-            <div className="panelTitle">WE HANDLE:</div>
+        <section className="middle">
+          <div className="servicesCol">
+            <div className="labelBrush">WE HANDLE:</div>
+
             <div className="serviceList">
               {services.map((item) => (
-                <div key={item} className="serviceRow">
-                  <div className="serviceIcon">✓</div>
-                  <span>{item}</span>
+                <div className="serviceRow" key={item}>
+                  <div className="serviceDot">●</div>
+                  <div>{item}</div>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="panel">
-            <div className="panelTitle">OUR PROMISE:</div>
-            <div className="promiseBox">
-              {promises.map((item) => (
-                <div key={item} className="promiseRow">
-                  <span className="check">✔</span>
-                  <span>{item}</span>
-                </div>
-              ))}
+          <div className="promiseCol">
+            <div className="promiseTop">
+              <div className="shield">✓</div>
+
+              <div className="promiseText">
+                <div className="promiseTitle">OUR PROMISE:</div>
+
+                {promise.map((item) => (
+                  <div className="promiseRow" key={item}>
+                    <span className="check">✔</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className="reviewBox">
@@ -139,37 +138,47 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="gallery">
-            <div className="galleryCard large">
-              <img
-                src="https://images.unsplash.com/photo-1601758173927-196cc8a9b1e5?auto=format&fit=crop&w=1200&q=80"
-                alt="Raccoon"
-              />
-            </div>
-            <div className="galleryRow">
+          <div className="galleryCol">
+            <div className="galleryGrid">
               <div className="galleryCard">
                 <img
-                  src="https://images.unsplash.com/photo-1595433562696-8c69b6e3c1a2?auto=format&fit=crop&w=900&q=80"
+                  src="https://images.unsplash.com/photo-1601758173927-196cc8a9b1e5?auto=format&fit=crop&w=900&q=80"
+                  alt="Rat"
+                />
+              </div>
+
+              <div className="galleryCard">
+                <img
+                  src="https://images.unsplash.com/photo-1560743173-567a3b5658b1?auto=format&fit=crop&w=900&q=80"
+                  alt="Skunk"
+                />
+              </div>
+
+              <div className="galleryCard wide">
+                <img
+                  src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=1200&q=80"
                   alt="Raccoon"
                 />
               </div>
+
               <div className="galleryCard">
                 <img
-                  src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=900&q=80"
-                  alt="Raccoon"
+                  src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80"
+                  alt="Bird"
                 />
               </div>
-            </div>
-            <div className="galleryCard wide">
-              <img
-                src="https://images.unsplash.com/photo-1601758173927-196cc8a9b1e5?auto=format&fit=crop&w=1200&q=80"
-                alt="Raccoon"
-              />
+
+              <div className="galleryCard">
+                <img
+                  src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80"
+                  alt="Squirrel"
+                />
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="shell whiteBar">
+        <section className="whiteBand">
           <div className="whiteCell">
             <div className="circleIcon">🌐</div>
             <div>
@@ -178,7 +187,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="whiteCell">
+          <div className="whiteCell divider">
             <div className="circleIcon">✉</div>
             <div>
               <div className="whiteTop">EMAIL US</div>
@@ -187,9 +196,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="shell badgeBar">
-          {badges.map((item) => (
-            <div key={item} className="badge">
+        <section className="bottomBand">
+          {bottomBadges.map((item) => (
+            <div className="bottomItem" key={item}>
               {item}
             </div>
           ))}
@@ -201,149 +210,63 @@ export default function Home() {
           --green:#b8d92b;
           --black:#050505;
           --white:#f5f5f5;
+          --off:#d9d9d9;
+          --line:rgba(184,217,43,.28);
         }
 
         *{box-sizing:border-box}
+
         body{
           margin:0;
-          font-family:Arial, Helvetica, sans-serif;
           background:var(--black);
           color:var(--white);
+          font-family:Arial, Helvetica, sans-serif;
         }
 
         .page{
           min-height:100vh;
-          padding:16px;
-          position:relative;
-          overflow-x:hidden;
           background:
-            radial-gradient(circle at 15% 10%, rgba(184,217,43,.06), transparent 18%),
-            radial-gradient(circle at 85% 20%, rgba(184,217,43,.06), transparent 18%),
+            radial-gradient(circle at 15% 10%, rgba(184,217,43,.05), transparent 18%),
+            radial-gradient(circle at 85% 20%, rgba(184,217,43,.05), transparent 18%),
             #050505;
-        }
-
-        .glow{
-          position:fixed;
-          border-radius:999px;
-          filter:blur(90px);
-          pointer-events:none;
-          opacity:.18;
-          z-index:0;
-        }
-
-        .glow1{
-          width:280px;
-          height:280px;
-          background:var(--green);
-          top:0;
-          left:-80px;
-        }
-
-        .glow2{
-          width:320px;
-          height:320px;
-          background:var(--green);
-          right:-90px;
-          top:180px;
-        }
-
-        .shell{
-          max-width:1440px;
-          margin:0 auto 16px;
-          border:2px solid var(--green);
-          background:#080808;
-          position:relative;
-          z-index:2;
-          overflow:hidden;
-          box-shadow:0 0 24px rgba(184,217,43,.10);
-        }
-
-        .peek{
-          position:fixed;
-          z-index:1;
-          pointer-events:none;
-          object-fit:cover;
-          box-shadow:0 12px 24px rgba(0,0,0,.35);
-        }
-
-        .peekTop{
-          width:150px;
-          height:95px;
-          top:-10px;
-          left:50%;
-          transform:translateX(-50%);
-          border-radius:0 0 16px 16px;
-          animation:peekTopAnim 7s ease-in-out infinite;
-        }
-
-        .peekLeft{
-          width:120px;
-          height:120px;
-          left:-55px;
-          top:60%;
-          border-radius:16px;
-          animation:peekLeftAnim 8s ease-in-out infinite;
-        }
-
-        .peekRight{
-          width:120px;
-          height:120px;
-          right:-55px;
-          top:36%;
-          border-radius:16px;
-          animation:peekRightAnim 8s ease-in-out infinite;
-        }
-
-        @keyframes peekTopAnim{
-          0%,100%{transform:translateX(-50%) translateY(-36px)}
-          50%{transform:translateX(-50%) translateY(-6px)}
-        }
-
-        @keyframes peekLeftAnim{
-          0%,100%{transform:translateX(-30px) rotate(4deg)}
-          50%{transform:translateX(18px) rotate(-2deg)}
-        }
-
-        @keyframes peekRightAnim{
-          0%,100%{transform:translateX(30px) rotate(-4deg)}
-          50%{transform:translateX(-18px) rotate(2deg)}
         }
 
         .hero{
           display:grid;
-          grid-template-columns:1.05fr .95fr;
+          grid-template-columns:1.08fr .92fr;
           min-height:470px;
+          background:#070707;
         }
 
         .heroLeft{
-          padding:28px;
+          padding:28px 30px 24px;
           background:#060606;
-          position:relative;
         }
 
         .roofWrap{
           position:relative;
           width:190px;
-          height:24px;
-          margin-bottom:4px;
+          height:28px;
+          margin-bottom:2px;
         }
 
-        .roofL,.roofR{
+        .roofLeft,
+        .roofRight{
           position:absolute;
-          top:8px;
+          top:7px;
           height:0;
           border-top:4px solid white;
         }
 
-        .roofL{
-          width:88px;
+        .roofLeft{
           left:0;
+          width:88px;
           transform:skewX(-38deg);
         }
 
-        .roofR{
-          width:118px;
+        .roofRight{
           left:74px;
+          width:118px;
           transform:skewX(38deg);
         }
 
@@ -372,8 +295,8 @@ export default function Home() {
 
         .brand{
           margin:0;
-          font-size:clamp(60px, 8vw, 122px);
-          line-height:.88;
+          font-size:clamp(62px, 8vw, 126px);
+          line-height:.86;
           font-weight:900;
           letter-spacing:-3px;
           text-transform:uppercase;
@@ -383,20 +306,20 @@ export default function Home() {
         .white{color:white}
 
         .trapLogo{
-          width:86px;
-          height:86px;
+          width:90px;
+          height:90px;
           border:3px solid white;
           position:relative;
           background:
             repeating-linear-gradient(90deg, transparent 0 8px, white 8px 10px),
             repeating-linear-gradient(180deg, transparent 0 8px, white 8px 10px);
-          margin-bottom:10px;
+          margin-bottom:12px;
         }
 
         .trapDoor{
           position:absolute;
-          width:26px;
-          height:56px;
+          width:28px;
+          height:58px;
           right:8px;
           top:12px;
           border:3px solid white;
@@ -405,13 +328,15 @@ export default function Home() {
         }
 
         .subBrand{
-          margin-top:6px;
-          font-size:24px;
+          margin-top:4px;
+          font-size:clamp(18px, 1.9vw, 30px);
           font-weight:900;
           text-transform:uppercase;
+          letter-spacing:1px;
         }
 
-        .headlineTop,.headlineBottom{
+        .headlineTop,
+        .headlineBottom{
           margin:0;
           text-transform:uppercase;
           font-weight:900;
@@ -419,151 +344,210 @@ export default function Home() {
         }
 
         .headlineTop{
-          margin-top:24px;
-          font-size:clamp(40px, 5vw, 84px);
+          margin-top:22px;
+          font-size:clamp(40px, 5vw, 88px);
+          color:white;
         }
 
         .headlineBottom{
-          font-size:clamp(48px, 6vw, 96px);
+          font-size:clamp(48px, 6vw, 102px);
           color:var(--green);
         }
 
         .tagline{
           margin-top:14px;
-          font-size:22px;
+          display:flex;
+          align-items:center;
+          gap:14px;
+          font-size:clamp(18px, 2vw, 34px);
           font-weight:900;
           text-transform:uppercase;
+        }
+
+        .line{
+          flex:1;
+          height:3px;
+          background:var(--green);
         }
 
         .heroRight{
           position:relative;
           overflow:hidden;
-          min-height:470px;
+          background:#0a0a0a;
         }
 
-        .slash{
+        .heroImageWrap{
+          width:100%;
+          height:100%;
+          position:relative;
+        }
+
+        .heroImageWrap::before{
+          content:"";
           position:absolute;
-          left:-30px;
+          left:-24px;
           top:0;
-          width:120px;
+          width:110px;
           height:100%;
           transform:skewX(-16deg);
-          border-right:6px solid rgba(184,217,43,.25);
+          border-right:6px solid rgba(184,217,43,.28);
           background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0));
           z-index:2;
         }
 
-        .heroImg{
+        .heroImage{
           width:100%;
           height:100%;
           object-fit:cover;
-          animation:slowLook 10s ease-in-out infinite alternate;
+          display:block;
         }
 
-        @keyframes slowLook{
-          0%{transform:scale(1.03) translateX(0)}
-          50%{transform:scale(1.06) translateX(-10px)}
-          100%{transform:scale(1.05) translateX(8px)}
-        }
-
-        .trusted{
+        .trustTag{
           position:absolute;
           right:18px;
-          bottom:18px;
+          bottom:20px;
           background:var(--green);
           color:black;
           font-weight:900;
           text-transform:uppercase;
-          padding:14px 18px;
-          max-width:220px;
           line-height:1.05;
+          padding:14px 18px;
+          font-size:clamp(18px, 2vw, 34px);
           transform:rotate(-6deg);
+          box-shadow:0 10px 20px rgba(0,0,0,.28);
           z-index:3;
         }
 
-        .comingBar{
+        .phoneBand{
           background:var(--green);
           color:black;
-          display:flex;
+          display:grid;
+          grid-template-columns:120px 1fr;
           align-items:center;
-          gap:18px;
-          padding:20px 28px;
+          gap:20px;
+          padding:18px 28px;
+          border-top:2px solid #040404;
+          border-bottom:2px solid #040404;
         }
 
-        .phoneCircle{
-          width:84px;
-          height:84px;
+        .phoneIcon{
+          width:88px;
+          height:88px;
           border-radius:999px;
           background:black;
           color:var(--green);
           display:flex;
           align-items:center;
           justify-content:center;
-          font-size:38px;
-          flex:0 0 auto;
+          font-size:40px;
+          font-weight:900;
         }
 
-        .comingBig{
-          font-size:clamp(44px, 6vw, 96px);
+        .phoneBig{
+          font-size:clamp(46px, 6vw, 96px);
           font-weight:900;
           line-height:.95;
           text-transform:uppercase;
+          letter-spacing:1px;
         }
 
-        .comingSmall{
-          font-size:20px;
+        .phoneSmall{
+          margin-top:8px;
+          display:flex;
+          align-items:center;
+          gap:12px;
+          font-size:clamp(16px, 1.6vw, 28px);
           font-weight:900;
           text-transform:uppercase;
         }
 
-        .content{
+        .smallLine{
+          flex:1;
+          height:3px;
+          background:rgba(0,0,0,.45);
+        }
+
+        .middle{
           display:grid;
-          grid-template-columns:.9fr 1fr 1fr;
-          gap:16px;
-          padding:16px;
+          grid-template-columns:.95fr .95fr 1.1fr;
+          gap:18px;
+          padding:22px;
+          background:#060606;
         }
 
-        .panel{
-          background:#090909;
-        }
-
-        .panelTitle{
+        .labelBrush{
           display:inline-block;
           background:var(--green);
           color:black;
-          padding:8px 16px;
-          font-size:28px;
+          padding:8px 18px;
+          font-size:clamp(22px, 2vw, 36px);
           font-weight:900;
           text-transform:uppercase;
           margin-bottom:14px;
         }
 
-        .serviceRow,.promiseRow{
+        .serviceRow{
           display:flex;
           align-items:center;
-          gap:12px;
-          padding:10px 0;
-          border-bottom:1px solid rgba(184,217,43,.25);
-          font-size:26px;
+          gap:14px;
+          padding:12px 0;
+          border-bottom:1px solid var(--line);
+          font-size:clamp(24px, 1.8vw, 38px);
           font-weight:900;
           text-transform:uppercase;
         }
 
-        .serviceIcon,.check{
+        .serviceDot{
+          width:40px;
           color:var(--green);
+          text-align:center;
         }
 
-        .promiseBox{
-          border:2px solid rgba(184,217,43,.22);
-          padding:18px;
-          background:#101010;
-          margin-bottom:18px;
+        .promiseTop{
+          display:flex;
+          gap:18px;
+          align-items:flex-start;
+        }
+
+        .shield{
+          min-width:90px;
+          height:90px;
+          border:4px solid white;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          font-size:42px;
+          font-weight:900;
+          color:var(--green);
+          clip-path:polygon(50% 0%, 100% 18%, 100% 62%, 50% 100%, 0% 62%, 0% 18%);
+        }
+
+        .promiseTitle{
+          color:var(--green);
+          font-size:clamp(28px, 2vw, 42px);
+          font-weight:900;
+          text-transform:uppercase;
+          margin-bottom:10px;
+        }
+
+        .promiseRow{
+          display:flex;
+          align-items:center;
+          gap:12px;
+          font-size:clamp(22px, 1.55vw, 30px);
+          font-weight:800;
+          margin:8px 0;
+        }
+
+        .check{
+          color:var(--green);
         }
 
         .reviewBox{
           border:2px solid var(--green);
           padding:18px;
           text-align:center;
+          margin-top:18px;
           background:#0a0a0a;
         }
 
@@ -575,7 +559,7 @@ export default function Home() {
         }
 
         .reviewBig{
-          font-size:34px;
+          font-size:clamp(28px, 2.2vw, 42px);
           font-weight:900;
           text-transform:uppercase;
           line-height:1.02;
@@ -584,18 +568,13 @@ export default function Home() {
         .reviewSmall{
           margin-top:10px;
           color:var(--green);
-          font-size:20px;
+          font-size:clamp(18px, 1.4vw, 26px);
           font-weight:900;
           text-transform:uppercase;
           line-height:1.1;
         }
 
-        .gallery{
-          display:grid;
-          gap:12px;
-        }
-
-        .galleryRow{
+        .galleryGrid{
           display:grid;
           grid-template-columns:1fr 1fr;
           gap:12px;
@@ -605,11 +584,13 @@ export default function Home() {
           border:2px solid var(--green);
           overflow:hidden;
           background:#111;
+          min-height:180px;
         }
 
-        .galleryCard.large{height:220px}
-        .galleryCard.wide{height:180px}
-        .galleryCard:not(.large):not(.wide){height:180px}
+        .galleryCard.wide{
+          grid-column:span 2;
+          min-height:190px;
+        }
 
         .galleryCard img{
           width:100%;
@@ -618,11 +599,13 @@ export default function Home() {
           display:block;
         }
 
-        .whiteBar{
+        .whiteBand{
           display:grid;
           grid-template-columns:1fr 1fr;
           background:#f2f2f2;
           color:black;
+          border-top:2px solid #040404;
+          border-bottom:2px solid #040404;
         }
 
         .whiteCell{
@@ -632,13 +615,13 @@ export default function Home() {
           padding:24px 26px;
         }
 
-        .whiteCell + .whiteCell{
+        .whiteCell.divider{
           border-left:4px solid var(--green);
         }
 
         .circleIcon{
-          width:80px;
-          height:80px;
+          width:78px;
+          height:78px;
           border-radius:999px;
           background:black;
           color:white;
@@ -650,13 +633,13 @@ export default function Home() {
         }
 
         .whiteTop{
-          font-size:22px;
+          font-size:clamp(22px, 1.9vw, 32px);
           font-weight:900;
           text-transform:uppercase;
         }
 
         .whiteMain{
-          font-size:38px;
+          font-size:clamp(30px, 2.6vw, 52px);
           font-weight:900;
           text-transform:uppercase;
           line-height:1;
@@ -669,63 +652,69 @@ export default function Home() {
           padding:0 4px;
         }
 
-        .badgeBar{
+        .bottomBand{
           display:grid;
           grid-template-columns:repeat(4,1fr);
-          background:#080808;
+          background:#070707;
         }
 
-        .badge{
+        .bottomItem{
           padding:20px 14px;
           text-align:center;
           font-weight:900;
           text-transform:uppercase;
-          border-right:1px solid rgba(184,217,43,.25);
+          font-size:clamp(16px, 1.25vw, 22px);
+          border-right:1px solid var(--line);
         }
 
-        .badge:last-child{
+        .bottomItem:last-child{
           border-right:0;
         }
 
         @media (max-width:1100px){
           .hero,
-          .content,
-          .whiteBar,
-          .badgeBar{
+          .middle,
+          .whiteBand,
+          .bottomBand{
             grid-template-columns:1fr;
           }
 
-          .galleryRow{
+          .galleryGrid{
             grid-template-columns:1fr;
           }
 
-          .whiteCell + .whiteCell{
+          .galleryCard.wide{
+            grid-column:span 1;
+          }
+
+          .whiteCell.divider{
             border-left:0;
             border-top:4px solid var(--green);
           }
 
-          .badge{
+          .bottomItem{
             border-right:0;
-            border-top:1px solid rgba(184,217,43,.25);
+            border-top:1px solid var(--line);
           }
 
-          .badge:first-child{
+          .bottomItem:first-child{
             border-top:0;
           }
         }
 
         @media (max-width:700px){
-          .comingBar{
+          .phoneBand{
+            grid-template-columns:1fr;
+            text-align:center;
+            justify-items:center;
+          }
+
+          .phoneSmall .smallLine{
+            display:none;
+          }
+
+          .promiseTop{
             flex-direction:column;
-            align-items:flex-start;
-          }
-
-          .serviceRow,.promiseRow{
-            font-size:22px;
-          }
-
-          .reviewBig{
-            font-size:28px;
           }
 
           .whiteMain{
