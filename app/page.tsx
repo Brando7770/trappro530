@@ -53,7 +53,7 @@ export default function Page() {
               </p>
 
               <div className="inline-block rounded-2xl border-4 border-[#b7d61a] bg-[#b7d61a] px-5 py-4 text-center text-black shadow-[0_0_40px_rgba(181,214,35,0.2)]">
-                <div className="text-3xl font-black sm:text-5xl">530-500-TRAP</div>
+                <div className="text-3xl font-black sm:text-5xl">775-501-7414</div>
                 <div className="mt-1 text-sm font-extrabold uppercase sm:text-base">
                   Call or Text • Same Day Service
                 </div>
@@ -61,13 +61,13 @@ export default function Page() {
 
               <div className="flex flex-wrap gap-3 pt-2">
                 <a
-                  href="tel:5305008727"
+                  href="tel:7755017414"
                   className="rounded-xl bg-[#b7d61a] px-6 py-3 text-sm font-black uppercase tracking-wide text-black transition hover:scale-[1.02]"
                 >
                   Call Now
                 </a>
                 <a
-                  href="sms:5305008727"
+                  href="sms:7755017414"
                   className="rounded-xl border border-[#b7d61a] px-6 py-3 text-sm font-black uppercase tracking-wide text-[#b7d61a] transition hover:bg-[#b7d61a] hover:text-black"
                 >
                   Text Us
@@ -234,7 +234,7 @@ export default function Page() {
               Need help now?
             </p>
             <h2 className="mt-1 text-3xl font-black uppercase sm:text-4xl">
-              530-500-TRAP
+              775-501-7414
             </h2>
             <p className="mt-2 text-sm font-bold uppercase">
               Call or text for same day service
@@ -243,13 +243,13 @@ export default function Page() {
 
           <div className="flex flex-wrap justify-center gap-3 md:justify-end">
             <a
-              href="tel:5305008727"
+              href="tel:7755017414"
               className="rounded-xl bg-black px-6 py-3 text-sm font-black uppercase tracking-wide text-white transition hover:scale-[1.02]"
             >
               Call Now
             </a>
             <a
-              href="sms:5305008727"
+              href="sms:7755017414"
               className="rounded-xl border-2 border-black px-6 py-3 text-sm font-black uppercase tracking-wide text-black transition hover:bg-black hover:text-white"
             >
               Text Us
@@ -266,11 +266,11 @@ export default function Page() {
               CALL US NOW
             </p>
             <a
-              href="530-500-TRAP(8727)"
+              href="7755017414"
           
               className="mt-2 block text-3xl font-black uppercase text-[#b7d61a] hover:text-white"
             >
-              "530-500-TRAP (8727)"
+              "775-501-7414"
             </a>
           </div>
 
