@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "TrapPro",
-  description: Wildlife and Pest Control",
+  description: "Wildlife and Pest Control",
 };
 
 export default function RootLayout({
